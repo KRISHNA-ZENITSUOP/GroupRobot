@@ -18,22 +18,22 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
 Hi {}, my name is {}! 
-// I am an Group Manager Robot Made By CeoWhiteHatCracks.
+// I am an Group Manager Robot Made By SUBHxD.
 You can find the list of available commands with /help.
 ==========================
--> [My Support Group](https://t.me/sensiblegroupmanagement)
--> My Creator [CeoWhiteHatCracks](https://t.me/ceowhitehatcracks)
+-> [My Support Group](https://t.me/KRISHNA_SUPPORT_CHATS)
+-> My Creator [SUBHxD](https://t.me/SUBHxD)
 ==========================
-`Maintained by` @CeoWhiteHatCracks
+`Maintained by` @SUBHxD
 
 """
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm a Part Of Sensible Group Management team.
+I'm a Part Of KRISHNA Group Management team.
 Look Down I Can Help You With Many Things\
 This Bot Supports Everything That No Bot Support HEHE Means It Is Better Then Other Bots.
-I'm managed by [CeoWhiteHatCracks](https://t.me/ceowhitehatcracks)
+I'm managed by [SUBHxD](https://t.me/SUBHxD)
 *Main* commands available:
  - /start: start the bot
  - /help: PM's you this message.
@@ -49,7 +49,7 @@ And the following:
 LYNDA_IMG = "https://telegra.ph/file/d526a22afbb9e004c7970.jpg"
 
 DONATE_STRING = """Heya, No Need To Donate
-Just Contribute With Joining Here @WhiteHatCracks \
+Just Contribute With Joining Here @SUBHxD \
 Thanks For Donating"""
 
 IMPORTED = {}
@@ -139,14 +139,14 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             first_name = update.effective_user.first_name
             buttons = InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="👥 Add This Bot To Your Group", url="https://t.me/ceogrouphelp_bot?startgroup=new")],
-                [InlineKeyboardButton(text="🙋 Support Group", url="https://t.me/sensiblegroupmanagement"), InlineKeyboardButton(text="We Are Here To Hear You", url="https://t.me/ceowhitehatcracks_bot")],
+                [[InlineKeyboardButton(text="👥 Add This Bot To Your Group", url="https://t.me/SUBHxD?startgroup=new")],
+                [InlineKeyboardButton(text="🙋 Support Group", url="https://t.me/KRISHNA_SUPPORT_CHATS"), InlineKeyboardButton(text="We Are Here To Hear You", url="https://t.me/ceowhitehatcracks_bot")],
                 [InlineKeyboardButton(text="❔ Help", callback_data="help_back"), InlineKeyboardButton(text="🔔 Update Channel", url="https://t.me/sensiblegroupmanagement")]])
             update.effective_message.reply_photo(LYNDA_IMG,
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 parse_mode=ParseMode.MARKDOWN, reply_markup=buttons)
     else:
-        update.effective_message.reply_text("Yo, whadup?")
+        update.effective_message.reply_text("Yo, what's up?")
 
 
 # for test purposes
@@ -375,7 +375,7 @@ def donate(bot: Bot, update: Update):
     if chat.type == "private":
         update.effective_message.reply_text(DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
-        if OWNER_ID != 709723121 and DONATION_LINK:
+        if OWNER_ID != 1284146204 and DONATION_LINK:
             update.effective_message.reply_text("You can also donate to the person currently running me "
                                                 "[here]({})".format(DONATION_LINK),
                                                 parse_mode=ParseMode.MARKDOWN)
